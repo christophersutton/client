@@ -1,4 +1,4 @@
-import { configs } from "../../config";
+import { configs } from "../../../config";
 
 export const START_LOGOUT = "START_LOGOUT";
 export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";

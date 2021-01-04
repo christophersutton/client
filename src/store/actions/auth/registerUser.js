@@ -1,5 +1,5 @@
 import axios from "axios";
-import { configs } from "../../config";
+import { configs } from "../../../config";
 
 export const ADD_USER = "ADD_USER";
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
