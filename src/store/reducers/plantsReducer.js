@@ -35,6 +35,19 @@ function plantsReducer(state = initialState, action) {
     case START_PLANT_EDIT:
     case START_PLANT_DELETE:
       return { ...state, loading: true };
+    case GET_PLANT_SUCCESS:
+    case DELETE_PLANT_SUCCESS:
+      return { ...state, loading: false, plants: payload };
+    case ADD_PLANT_SUCCESS:
+      return { ...state, loading: false, plants: payload.plants };
+    case EDIT_PLANT_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        plants: [...state.plants].map((plant) =>
+          plant.id === payload.id ? payload : plant
+        ),
+      };
     case GET_PLANT_ERR:
     case ADD_PLANT_ERR:
     case EDIT_PLANT_ERR:
