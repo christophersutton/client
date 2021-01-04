@@ -1,4 +1,4 @@
 export const configs = {
-  API_ENDPOINT: ``,
+  API_ENDPOINT: `https://water-my-plants-tt-webft-48.herokuapp.com`,
   TOKEN: `wmp_token`,
 };
