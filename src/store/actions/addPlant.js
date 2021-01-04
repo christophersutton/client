@@ -1,4 +1,4 @@
-import { axiosWithAuth } from "../../components/utils/axiosWithAuth";
+import { axiosWithAuth } from "../../utils/axiosWithAuth";
 import { configs } from "../../config";
 
 export const START_PLANT_ADD = "START_PLANT_ADD ";
