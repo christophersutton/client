@@ -1,7 +1,7 @@
 //react imports
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import "./scss/App.scss";
+import "./sass/App.scss";
 
 // static components
 import NavBar from "./static/NavBar";
