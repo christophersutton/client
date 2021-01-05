@@ -2,6 +2,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import "./sass/App.scss";
+import './sass/Forms.scss'
 
 // static components
 import NavBar from "./static/NavBar";
@@ -12,6 +13,7 @@ import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
 import ResetPassword from "../components/auth/ResetPassword";
 import Home from "./routes/Home";
+import Contact from './routes/Contact'
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
           <Route path='/resetpassword' component={ResetPassword} />
+          <Route path='/contact' component={Contact} />
         </Switch>
       </main>
       <Footer />

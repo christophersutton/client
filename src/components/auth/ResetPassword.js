@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import passwordResetSchema from "./validation/passwordResetSchema";
-import '../sass/Auth.scss'
+
 
 const initialFormValues = {
   email: "",
