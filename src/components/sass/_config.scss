@@ -71,11 +71,11 @@ $h3-font-sizes: (
 );
 
 $p-font-sizes: (
-  null: calc(1rem + 0.25vw),
-  map-get($breakpoints, "phablet"): calc(1.2rem + 0.25vw),
-  map-get($breakpoints, "tablet"): calc(1.3rem + 0.25vw),
-  map-get($breakpoints, "desktop"): calc(1.4rem + 0.25vw),
-  map-get($breakpoints, "ultra-wide"): calc(1.6rem + 0.25vw),
+  null: calc(1rem + 0.15vw),
+  map-get($breakpoints, "phablet"): calc(1.2rem + 0.15vw),
+  map-get($breakpoints, "tablet"): calc(1.3rem + 0.15vw),
+  map-get($breakpoints, "desktop"): calc(1.4rem + 0.15vw),
+  map-get($breakpoints, "ultra-wide"): calc(1.6rem + 0.15vw),
 );
 
 $sub-font-sizes: (

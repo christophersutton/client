@@ -20,11 +20,16 @@ body {
   }
   h1 {
     @include font-size($h1-font-sizes);
+    font-weight: 600;
+    margin: 1rem auto;
   }
   h2 {
     @include font-size($h2-font-sizes);
+    font-weight: 400;
+    margin: 0.75rem auto;
   }
   p {
     @include font-size($p-font-sizes);
+    font-weight: 300;
   }
 }
