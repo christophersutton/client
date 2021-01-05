@@ -9,26 +9,34 @@
   color: green;
   text-align: center;
 
-  div {
+  > div {
     margin: 0px auto;
     display: flex column;
   }
   h1 {
     @include font-size($mega-header-font-sizes);
+    font-family: $font-sub;
+    text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 4px 8px;
+    padding: 1rem 1rem 5rem;
   }
 
   .hero-btn {
-    @include font-size($mega-subheader-font-sizes);
+    @include font-size($h2-font-sizes);
     padding: 20px 10px;
-    background-color: green;
+    background-color: map-get($colors, app-darker-green);
     border-radius: 5px;
-    color: white;
+    color: map-get($colors, app-white);
+    text-transform: uppercase;
     text-decoration: none;
+    position: relative;
+    top: -2.7rem;
   }
 }
-
+.features,
+.mission {
+  padding: 3rem;
+}
 .features h2 {
   margin: 50px 0 0px 0;
 }
