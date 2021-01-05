@@ -39,11 +39,7 @@ export default function Login() {
 
   const change = (e) => {
     const { name, value } = e.target;
-    console.log(errors);
-    console.log(initialFormErrors)
-    if (JSON.stringify(errors) !== JSON.stringify(initialFormErrors)){
-      validate(e)
-    };
+    JSON.stringify(errors) !== JSON.stringify(initialFormErrors) && validate(e)
     setFormValues({ ...formValues, [name]: value });
   };
 
