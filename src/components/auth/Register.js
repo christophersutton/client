@@ -1,10 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function Login() {
-
-    return (
-        <div>
-            New User Registration
-        </div>
-    )
+  return <div>New User Registration</div>;
 }

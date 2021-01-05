@@ -5,8 +5,9 @@
 // Feel free to reach out if you have any questions about using sass, though
 // -zempo
 .container {
+  background-color: map-get($colors, app-white);
   margin: 0px auto;
-  max-width: map-get($breakpoints, "desktop")
+  max-width: map-get($breakpoints, "desktop");
 }
 body {
   background-color: map-get($colors, app-white);
