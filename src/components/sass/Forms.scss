@@ -8,10 +8,10 @@
 
   @include font-size($p-font-sizes);
 
-  input {
+  input, textarea {
     width: 100%;
     @include font-size($p-font-sizes);
-    padding: 1em 0.5em;
+    padding: 10px;
     background-color: #fff;
     border: 2px solid map-get($colors, app-text-light);
     border-radius: 4px;
