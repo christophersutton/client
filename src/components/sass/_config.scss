@@ -1,3 +1,17 @@
+$font-main: "Josefin Sans", sans-serif;
+$font-sub: "Lato", sans-serif;
+
+$colors: (
+  app-white: #fcf9f3,
+  app-text: #181111,
+  app-text-light: #cab09c,
+  app-brown: #49301e,
+  app-light-green: #dae4cc,
+  app-med-green: #71b25b,
+  app-dark-green: #80944e,
+  app-darker-green: #4b671f,
+);
+
 $breakpoints: (
   "phone": 400px,
   "phone-wide": 480px,

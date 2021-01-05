@@ -4,3 +4,27 @@
 // IMPORTANT! You can write regular css in here!
 // Feel free to reach out if you have any questions about using sass, though
 // -zempo
+body {
+  background-color: map-get($colors, app-white);
+  color: map-get($colors, app-text);
+  h1,
+  h2,
+  h3,
+  label {
+    font-family: $font-main;
+  }
+  li,
+  p,
+  input {
+    font-family: $font-sub;
+  }
+  h1 {
+    @include font-size($h1-font-sizes);
+  }
+  h2 {
+    @include font-size($h2-font-sizes);
+  }
+  p {
+    @include font-size($p-font-sizes);
+  }
+}
