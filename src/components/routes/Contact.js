@@ -2,16 +2,13 @@ import React, { useState, useEffect } from "react";
 import * as Yup from "yup";
 
 const contactFormSchema = Yup.object().shape({
-  name: Yup.string()
-    .required("Please enter a name")
-,
-email: Yup.string()
-  .required("Please enter a valid email")
-  .email("Please enter a valid email")
-  ,
-message: Yup.string()
-  .required("Please enter a message")
+  name: Yup.string().required("Please enter a name"),
+  email: Yup.string()
+    .required("Please enter a valid email")
+    .email("Please enter a valid email"),
+  message: Yup.string().required("Please enter a message"),
 });
+
 const initialFormValues = {
   name: "",
   email: "",
@@ -74,10 +71,10 @@ export default function Contact() {
             onBlur={validate}
             required
           ></input>
-            <p className='errors'>&nbsp;{errors.name}</p>
+          <p className="errors">&nbsp;{errors.name}</p>
         </div>
         <div>
-        <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             id="email"
             name="email"
@@ -88,10 +85,10 @@ export default function Contact() {
             onBlur={validate}
             required
           ></input>
-            <p className='errors'>&nbsp;{errors.email}</p>
+          <p className="errors">&nbsp;{errors.email}</p>
         </div>
         <div>
-        <label htmlFor="message">Message</label>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"
@@ -102,10 +99,10 @@ export default function Contact() {
             onBlur={validate}
             required
           ></textarea>
-            <p className='errors'>&nbsp;{errors.message}</p>
+          <p className="errors">&nbsp;{errors.message}</p>
         </div>
         <div className="login">
-          <button type='submit' disabled={disabled}>
+          <button type="submit" disabled={disabled}>
             Send Message
           </button>
         </div>
