@@ -8,24 +8,23 @@ import NavBar from "./static/NavBar";
 import Footer from "./static/Footer";
 
 // routes
-import Login from "../components/auth/Login"
-import Register from "../components/auth/Register"
-import ResetPassword from "../components/auth/ResetPassword"
-import Home from "./routes/Home"
+import Login from "../components/auth/Login";
+import Register from "../components/auth/Register";
+import ResetPassword from "../components/auth/ResetPassword";
+import Home from "./routes/Home";
 
 function App() {
   return (
-    <div className="container">
-    
+    <div className='container'>
       <header>
         <NavBar />
       </header>
       <main>
         <Switch>
-          <Route path='/' exact component={Home}/>
-          <Route path='/register' component={Register}/>
-          <Route path='/login' component={Login}/>
-          <Route path='/resetpassword' component={ResetPassword}/>
+          <Route path='/' exact component={Home} />
+          <Route path='/register' component={Register} />
+          <Route path='/login' component={Login} />
+          <Route path='/resetpassword' component={ResetPassword} />
         </Switch>
       </main>
       <Footer />
