@@ -1,0 +1,11 @@
+@import "config";
+@import "utils";
+
+header {
+  nav {
+    svg {
+      max-height: 40px;
+      max-width: 40px;
+    }
+  }
+}

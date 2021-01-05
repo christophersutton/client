@@ -4,23 +4,28 @@
 // IMPORTANT! You can write regular css in here!
 // Feel free to reach out if you have any questions about using sass, though
 // -zempo
-
 .container {
   margin: 0px auto;
   max-width: map-get($breakpoints, "desktop")
 }
-
 body {
+  background-color: map-get($colors, app-white);
+  color: map-get($colors, app-text);
   h1 {
     @include font-size($h1-font-sizes);
+    font-family: $font-sub;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 1rem auto;
   }
   h2 {
     @include font-size($h2-font-sizes);
-  }
-  h3 {
-    @include font-size($h3-font-sizes);
+    font-weight: 600;
+    margin: 0.75rem auto;
+    font-family: $font-main;
   }
   p {
     @include font-size($p-font-sizes);
+    font-weight: 300;
   }
 }

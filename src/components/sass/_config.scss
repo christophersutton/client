@@ -1,3 +1,17 @@
+$font-main: "Nib Pro";
+$font-sub: "raisonne-demibold";
+
+$colors: (
+  app-white: #fcf9f3,
+  app-text: #181111,
+  app-text-light: #cab09c,
+  app-brown: #49301e,
+  app-light-green: #dae4cc,
+  app-med-green: #71b25b,
+  app-dark-green: #80944e,
+  app-darker-green: #4b671f,
+);
+
 $breakpoints: (
   "phone": 400px,
   "phone-wide": 480px,
@@ -31,37 +45,37 @@ $mega-subheader-font-sizes: (
 );
 
 $h1-font-sizes: (
-  null: calc(1.4rem + 0.5vw),
-  map-get($breakpoints, "phone-wide"): calc(2rem + 0.5vw),
-  map-get($breakpoints, "phablet"): calc(2.4rem + 0.5vw),
-  map-get($breakpoints, "tablet"): calc(2.8rem + 0.5vw),
-  map-get($breakpoints, "desktop"): calc(3.2rem + 0.5vw),
-  map-get($breakpoints, "ultra-wide"): calc(4rem + 0.5vw),
+  null: calc(1.4rem + 0.3vw),
+  map-get($breakpoints, "phone-wide"): calc(2rem + 0.3vw),
+  map-get($breakpoints, "phablet"): calc(2.4rem + 0.3vw),
+  map-get($breakpoints, "tablet"): calc(2.8rem + 0.3vw),
+  map-get($breakpoints, "desktop"): calc(3.2rem + 0.3vw),
+  map-get($breakpoints, "ultra-wide"): calc(4rem + 0.3vw),
 );
 
 $h2-font-sizes: (
-  null: calc(1.3rem + 0.45vw),
-  map-get($breakpoints, "phone-wide"): calc(1.6rem + 0.45vw),
-  map-get($breakpoints, "phablet"): calc(1.8rem + 0.45vw),
-  map-get($breakpoints, "tablet"): calc(2rem + 0.45vw),
-  map-get($breakpoints, "desktop"): calc(2.2rem + 0.45vw),
-  map-get($breakpoints, "ultra-wide"): calc(2.8rem + 0.45vw),
+  null: calc(1.3rem + 0.25vw),
+  map-get($breakpoints, "phone-wide"): calc(1.6rem + 0.25vw),
+  map-get($breakpoints, "phablet"): calc(1.8rem + 0.25vw),
+  map-get($breakpoints, "tablet"): calc(2rem + 0.25vw),
+  map-get($breakpoints, "desktop"): calc(2.2rem + 0.25vw),
+  map-get($breakpoints, "ultra-wide"): calc(2.8rem + 0.25vw),
 );
 
 $h3-font-sizes: (
-  null: calc(1.1rem + 0.35vw),
-  map-get($breakpoints, "phablet"): calc(1.3rem + 0.35vw),
-  map-get($breakpoints, "tablet"): calc(1.4rem + 0.35vw),
-  map-get($breakpoints, "desktop"): calc(1.6rem + 0.35vw),
-  map-get($breakpoints, "ultra-wide"): calc(2rem + 0.35vw),
+  null: calc(1.1rem + 0.2vw),
+  map-get($breakpoints, "phablet"): calc(1.3rem + 0.2vw),
+  map-get($breakpoints, "tablet"): calc(1.4rem + 0.2vw),
+  map-get($breakpoints, "desktop"): calc(1.6rem + 0.2vw),
+  map-get($breakpoints, "ultra-wide"): calc(2rem + 0.2vw),
 );
 
 $p-font-sizes: (
-  null: calc(1rem + 0.25vw),
-  map-get($breakpoints, "phablet"): calc(1.2rem + 0.25vw),
-  map-get($breakpoints, "tablet"): calc(1.3rem + 0.25vw),
-  map-get($breakpoints, "desktop"): calc(1.4rem + 0.25vw),
-  map-get($breakpoints, "ultra-wide"): calc(1.6rem + 0.25vw),
+  null: calc(1rem + 0.15vw),
+  map-get($breakpoints, "phablet"): calc(1.2rem + 0.15vw),
+  map-get($breakpoints, "tablet"): calc(1.3rem + 0.15vw),
+  map-get($breakpoints, "desktop"): calc(1.4rem + 0.15vw),
+  map-get($breakpoints, "ultra-wide"): calc(1.6rem + 0.15vw),
 );
 
 $sub-font-sizes: (
