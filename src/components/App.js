@@ -13,7 +13,7 @@ import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
 import ResetPassword from "../components/auth/ResetPassword";
 import Home from "./routes/Home";
-import Contact from './routes/Contact/Contact'
+import Contact from './routes/Contact'
 
 function App() {
   return (
