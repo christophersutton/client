@@ -1,6 +1,6 @@
 import React from "react";
 
-function MainLogo() {
+export const MainLogo = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -33,6 +33,4 @@ function MainLogo() {
       </g>
     </svg>
   );
-}
-
-export default MainLogo;
+};
