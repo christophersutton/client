@@ -10,6 +10,7 @@ import Footer from "./static/Footer";
 // routes
 import Login from "../components/auth/Login"
 import Register from "../components/auth/Register"
+import ResetPassword from "../components/auth/ResetPassword"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Switch>
           <Route path='/register' component={Register}/>
           <Route path='/login' component={Login}/>
+          <Route path='/resetpassword' component={ResetPassword}/>
 
           <Link to="/register">Register</Link>
 
