@@ -32,7 +32,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <Link className='auth-link' to='/login'>
+              <Link className='auth-link' to='/register'>
                 Sign Up
               </Link>
             </li>
