@@ -1,3 +1,102 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"); */
+@font-face {
+  font-family: "raisonne-demibold";
+  src: url("./fonts/raisonne-demibold.eot");
+  src: url("./fonts/raisonne-demibold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/raisonne-demibold.woff") format("woff"),
+    url("./fonts/raisonne-demibold.woff2") format("woff2"),
+    url("./fonts/raisonne-demibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nib Pro";
+  src: url("./fonts/NibPro-Light.eot");
+  src: url("./fonts/NibPro-Light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/NibPro-Light.woff2") format("woff2"),
+    url("./fonts/NibPro-Light.woff") format("woff"),
+    url("./fonts/NibPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nib Pro";
+  src: url("./fonts/NibPro-Italic.eot");
+  src: url("./fonts/NibPro-Italic.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/NibPro-Italic.woff2") format("woff2"),
+    url("./fonts/NibPro-Italic.woff") format("woff"),
+    url("./fonts/NibPro-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Nib Pro";
+  src: url("./fonts/NibPro-SemiBold.eot");
+  src: url("./fonts/NibPro-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/NibPro-SemiBold.woff2") format("woff2"),
+    url("./fonts/NibPro-SemiBold.woff") format("woff"),
+    url("./fonts/NibPro-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nib Pro";
+  src: url("./fonts/NibPro-Bold.eot");
+  src: url("./fonts/NibPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/NibPro-Bold.woff2") format("woff2"),
+    url("./fonts/NibPro-Bold.woff") format("woff"),
+    url("./fonts/NibPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nib Pro";
+  src: url("./fonts/NibPro-BoldItalic.eot");
+  src: url("./fonts/NibPro-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/NibPro-BoldItalic.woff2") format("woff2"),
+    url("./fonts/NibPro-BoldItalic.woff") format("woff"),
+    url("./fonts/NibPro-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Nib Pro";
+  src: url("./fonts/NibPro-LightItalic.eot");
+  src: url("./fonts/NibPro-LightItalic.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/NibPro-LightItalic.woff2") format("woff2"),
+    url("./fonts/NibPro-LightItalic.woff") format("woff"),
+    url("./fonts/NibPro-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Nib Pro";
+  src: url("./fonts/NibPro-SemiBoldItalic.eot");
+  src: url("./fonts/NibPro-SemiBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/NibPro-SemiBoldItalic.woff2") format("woff2"),
+    url("./fonts/NibPro-SemiBoldItalic.woff") format("woff"),
+    url("./fonts/NibPro-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Nib Pro";
+  src: url("./fonts/NibPro-Regular.eot");
+  src: url("./fonts/NibPro-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/NibPro-Regular.woff2") format("woff2"),
+    url("./fonts/NibPro-Regular.woff") format("woff"),
+    url("./fonts/NibPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ________________________________________ */
 
 /****** Solomon Zelenko's RESET *******/
@@ -17,7 +116,6 @@ html {
 }
 
 body {
-  background: #f8f9fa;
   overflow: overlay !important;
   margin: 0;
 }
