@@ -1,6 +1,6 @@
 //react imports
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./sass/App.scss";
 
 // static components
@@ -11,29 +11,25 @@ import Footer from "./static/Footer";
 import Login from "../components/auth/Login"
 import Register from "../components/auth/Register"
 import ResetPassword from "../components/auth/ResetPassword"
+import Home from "./routes/Home"
 
 function App() {
   return (
-    <>
+    <div className="container">
+    
       <header>
         <NavBar />
       </header>
       <main>
-        <h1>Plants</h1>
         <Switch>
+          <Route path='/' exact component={Home}/>
           <Route path='/register' component={Register}/>
           <Route path='/login' component={Login}/>
           <Route path='/resetpassword' component={ResetPassword}/>
-
-          <Link to="/register">Register</Link>
-
         </Switch>
-        
-
-        
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
