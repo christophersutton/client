@@ -1,0 +1,17 @@
+nav {
+    min-height:15%;
+    padding:3%;
+
+    ul {
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        border:1px solid green;
+        padding:5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        
+    }
+}
