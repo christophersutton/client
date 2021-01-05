@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import passwordResetSchema from "./validation/passwordResetSchema";
+import '../sass/Auth.scss'
 
 const initialFormValues = {
   email: "",
@@ -46,26 +47,27 @@ export default function ResetPassword() {
   };
 
   return (
-    <div>
-      <h1>Please enter email</h1>
+    <div class="form-container">
+      <h2>Reset Password</h2>
       <form onSubmit={submit}>
         <div>
-          <label htmlFor='email'>email</label>
-          <div className='mt-1'>
+          <div>
             <input
               id='email'
               name='email'
               type='text'
               autoComplete='email'
               value={formValues.email}
+              placeholder="Enter Your Email"
+              className={errors.email.length > 0 ? "error" : ""}
               onChange={change}
               onBlur={validate}
               required
             ></input>
           </div>
-          {errors.email.length > 0 && (
-            <p className='text-red-600'>{errors.email}</p>
-          )}
+          
+            <p className='errors'>&nbsp;{errors.email}</p>
+          
         </div>
         <div>
           <button type='submit' disabled={disabled}>
