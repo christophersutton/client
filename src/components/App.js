@@ -8,10 +8,10 @@ import NavBar from "./static/NavBar";
 import Footer from "./static/Footer";
 
 // routes
-// import Login from "../components/auth/Login";
-import Register from "../components/auth/Register";
-// import ResetPassword from "../components/auth/ResetPassword"
 import Home from "./routes/Home";
+import Login from "../components/auth/Login";
+import Register from "../components/auth/Register";
+import ResetPassword from "../components/auth/ResetPassword";
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
         <Switch>
           <Route path='/' component={Home} />
           <Route path='/register' component={Register} />
-          {/* <Route path='/login' component={Login} /> */}
-          {/* <Route path='/resetpassword' component={ResetPassword}/> */}
+          <Route path='/login' component={Login} />
+          <Route path='/resetpassword' component={ResetPassword} />
           <Link to='/register'>Register</Link>
         </Switch>
       </main>
