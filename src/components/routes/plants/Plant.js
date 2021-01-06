@@ -16,7 +16,7 @@ const Plant = (props) => {
   return (
     <li className='plant-list-item'>
       <div className='plant-preview'>
-        <h2>{nickname}</h2>
+        <h3>{nickname}</h3>
         <img
           src={
             image

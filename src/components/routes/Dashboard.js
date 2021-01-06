@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import getPlants from "../../store/actions/getPlants";
 import { connect } from "react-redux";
+import "../sass/Dashboard.scss";
 // components
 import Plant from "./plants/Plant";
 
