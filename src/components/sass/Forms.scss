@@ -8,7 +8,8 @@
 
   @include font-size($p-font-sizes);
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
     @include font-size($p-font-sizes);
     padding: 10px;
@@ -57,21 +58,17 @@
   }
   label {
     @include font-size($sub-font-sizes);
-    color:map-get($colors, app-brown )
+    color: map-get($colors, app-brown);
   }
   .errors {
     color: crimson;
     @include font-size($sub-font-sizes);
     margin: 3px 0;
   }
+}
 
-  .login {
-    text-align: center;
-    a {
-      text-decoration: none;
-      color: map-get($colors, app-med-green);
-      @include font-size($sub-font-sizes);
-    }
-    text-align: center;
-  }
+a.forgotpw {
+  text-decoration: none;
+  color: map-get($colors, app-med-green);
+  @include font-size($sub-font-sizes);
 }
