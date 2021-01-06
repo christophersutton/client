@@ -68,7 +68,7 @@ export default function FormBuilder(props) {
   return (
     <div>
       {fields.map((field) => (
-        <div key={field.id}>
+        <div key={field.id} className={`${field.type}-input`}>
           <label htmlFor={field.id}>{field.label}</label>
           {createInput(field)}
           <p className="errors">&nbsp;{errors[field.id]}</p>

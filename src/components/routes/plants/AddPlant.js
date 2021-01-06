@@ -2,16 +2,50 @@ import React from "react";
 import getPlants from "../../../store/actions/getPlants";
 import addPlant from "../../../store/actions/addPlant";
 import { connect } from "react-redux";
-import { FormBuilder } from '../../utils/FormBuilder'
+import * as Yup from 'yup';
+import FormBuilder from '../../utils/FormBuilder'
 
-const initialValues = {};
+
+const plantSchema = Yup.object().shape({
+  nickname: Yup.string().required("Please enter a name"),
+  species: Yup.string(),  
+  h20_frequency: Yup.number("Please enter a watering frequency").required(),
+  group: Yup.string(),
+  img: Yup.string(),
+  instructions: Yup.string(),
+});
+
+const fields = [
+  { id: "nickname", type: "text", label: "Nickname" },
+  { id: "species", type: "text", label: "Species" },
+  { id: "h20_frequency", type: "number", label: "Water Every # Days" },
+  { id: "group", type: "text", label: "Group" },
+  { id: "img", type: "text", label: "Image URL" },
+  { id: "instructions", type: "textarea", label: "Special Instructions" },
+];
+
+let init = {};
+fields.forEach((field) => (init[field.id] = ""));
 
 const AddPlant = (props) => {
+  const submit = (e) => {
+    e.preventDefault();
+    // post contact submit code
+  };
+
   return (
-    <form>
-      <h2>Add Your New Plant</h2>
-    </form>
-  );
+    <div className="form-container">
+      <h2>Add New Plant</h2>
+      <form onSubmit={submit}>
+        <FormBuilder
+          fields={fields}
+          init={init}
+          submitText="Add Plant"
+          validationSchema={plantSchema}
+        />
+      </form>
+    </div>
+  )
 };
 
 const mapStateToProps = (state) => ({
@@ -19,3 +53,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { addPlant, getPlants })(AddPlant);
+
+
