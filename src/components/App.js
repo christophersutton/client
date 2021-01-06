@@ -14,6 +14,7 @@ import Register from "../components/auth/Register";
 import ResetPassword from "../components/auth/ResetPassword";
 import Home from "./routes/Home";
 import Contact from './routes/Contact'
+import Dashboard from './routes/Dashboard/Dashboard'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='/resetpassword' component={ResetPassword} />
           <Route path='/contact' component={Contact} />
+          <Route path='/dashboard' component={Dashboard} />
         </Switch>
       </main>
       <Footer />
