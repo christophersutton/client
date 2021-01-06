@@ -20,11 +20,11 @@
     margin-bottom: 0px;
   }
 
-  input.error {
+  input.error, textarea.error {
     border: 2px solid crimson;
   }
 
-  input:focus {
+  input:focus, textarea:focus {
     border-color: map-get($colors, app-darker-green);
     box-shadow: 0 0 0 3px map-get($colors, app-med-green);
     outline: 3px solid transparent;
