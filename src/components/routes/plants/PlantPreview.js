@@ -1,7 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import { useModal } from "../../../utils/useModal";
+import PlantModal from "./PlantModal";
 
 const PlantPreview = (props) => {
+  const { isShowing: isShowingPlant, toggle: togglePlant } = useModal();
   const {
     id,
     nickname,
@@ -16,7 +19,7 @@ const PlantPreview = (props) => {
 
   return (
     <li className='plant-list-item'>
-      <div className='plant-preview'>
+      <div className='plant-preview' onClick={togglePlant}>
         <h3>{nickname}</h3>
         <img
           src={
@@ -27,6 +30,12 @@ const PlantPreview = (props) => {
           alt='plant preview'
         />
       </div>
+      <PlantModal
+        id={id}
+        payload={props.plant}
+        isShowing={isShowingPlant}
+        hide={togglePlant}
+      />
     </li>
   );
 };
