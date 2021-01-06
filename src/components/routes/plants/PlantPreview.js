@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Plant = (props) => {
+const PlantPreview = (props) => {
   const {
     id,
     nickname,
@@ -35,4 +35,4 @@ const mapStateToProps = (state) => ({
   state,
 });
 
-export default connect(mapStateToProps, {})(Plant);
+export default connect(mapStateToProps, {})(PlantPreview);
