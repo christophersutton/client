@@ -1,0 +1,11 @@
+@import "config";
+@import "utils";
+
+.dash-pg {
+  text-align: center;
+  .plant-preview {
+    img {
+      max-width: 300px;
+    }
+  }
+}
