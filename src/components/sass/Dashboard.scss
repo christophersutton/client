@@ -2,10 +2,38 @@
 @import "utils";
 
 .dash-pg {
-  text-align: center;
-  .plant-preview {
-    img {
-      max-width: 300px;
+  
+
+  .plant-list {
+    display:flex;
+  }
+  
+  .wrapper {
+    display:flex;
+  }
+
+  .header {
+    display:flex;
+    justify-content:space-between;
+    button {
+      padding: 10px 20px;
+      width: 100%;
+      border-radius: 5px;
+      margin: 5px 0;
+      background-color: map-get($colors, app-darker-green);
+      color: map-get($colors, app-white);
+      @include font-size($p-font-sizes);
+      cursor: pointer;
+      &:hover {
+        background-color: map-get($colors, app-med-green);
+      }
+      &:disabled {
+        background-color: map-get($colors, app-light-green);
+        cursor: not-allowed;
+      }
     }
+  }
+  .day {
+    margin-bottom:40px;
   }
 }

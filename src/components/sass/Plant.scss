@@ -40,4 +40,30 @@ body {
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
   }
+  .plant-preview {
+    border: 2px solid map-get($colors,app-light-green);
+    background-color:white;
+    border-radius:5px;
+    padding:0px;
+    margin-right:20px;
+    cursor:pointer;
+    &:hover {
+      border-color: map-get($colors, app-darker-green);
+      box-shadow: 0 0 0 3px map-get($colors, app-med-green);
+      outline: 3px solid transparent;
+    }
+    img {
+      display: block;
+      max-width: 300px;
+    }
+
+    .preview-header {
+      padding:10px 15px;
+      p {
+        @include font-size($sub-font-sizes);
+      }
+    }
+  }
+
+
 }
