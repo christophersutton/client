@@ -1,111 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import * as Yup from "yup";
 import loginFormSchema from "./validation/loginFormSchema";
-
-const initialFormValues = {
-  username: "",
-  password: "",
-  isPhone: false,
-};
-
-const initialFormErrors = {
-  username: "",
-  password: "",
-  isPhone: "",
-};
-
-const regex = /[a-zA-Z]/g;
+import FormBuilder from "../utils/FormBuilder";
 
 export default function Login() {
-  const [formValues, setFormValues] = useState(initialFormValues);
-  const [errors, setErrors] = useState(initialFormErrors);
-  const [disabled, setDisabled] = useState(true);
-  const [isPhone, setIsPhone] = useState(true);
+  const fields = [
+    { id: "username", type: "text", label: "Username" },
+    { id: "password", type: "text", label: "Password" },
+  ];
 
-  const setFormErrors = (name, value) => {
-    Yup.reach(loginFormSchema, name, isPhone)
-      .validate(value)
-      .then(() => setErrors({ ...errors, [name]: "" }))
-      .catch((err) => setErrors({ ...errors, [name]: err.errors[0] }));
-  };
-
-  useEffect(() => {
-    loginFormSchema.isValid(formValues).then((valid) => {
-      setDisabled(!valid);
-    });
-  }, [formValues]);
-
-  const validate = (e) => {
-    const { name, value } = e.target;
-    name === "username" && value.match(regex)
-      ? setIsPhone(false)
-      : setIsPhone(true);
-    setFormErrors(name, value);
-  };
-
-  const change = (e) => {
-    const { name, value } = e.target;
-    name === "username" && value.match(regex)
-      ? setIsPhone(false)
-      : setIsPhone(true);
-    errors !== initialFormErrors && validate(e);
-    setFormValues({ ...formValues, [name]: value });
-  };
+  let init = {};
+  fields.forEach((field) => (init[field.id] = ""));
 
   const submit = (e) => {
     e.preventDefault();
-    // post login info code here
+    // post login code here
   };
 
   return (
-    <div>
-      <h1>Welcome Back</h1>
+    <div className="form-container">
+      <h2>Welcome Back</h2>
       <form onSubmit={submit}>
-        <div>
-          <label htmlFor='username'>Username</label>
-          <div className='mt-1'>
-            <input
-              id='username'
-              name='username'
-              type='text'
-              autoComplete='username'
-              value={formValues.username}
-              onChange={change}
-              onBlur={validate}
-              required
-            ></input>
-          </div>
-          {errors.username.length > 0 && (
-            <p className='text-red-600'>{errors.username}</p>
-          )}
-        </div>
-        <div>
-          <label htmlFor='password'>Password</label>
-          <div className='mt-1'>
-            <input
-              id='password'
-              name='password'
-              type='text'
-              autoComplete='password'
-              value={formValues.password}
-              onChange={change}
-              onBlur={validate}
-              required
-            ></input>
-          </div>
-          {errors.password.length > 0 && (
-            <p className='text-red-600'>{errors.password}</p>
-          )}
-          <Link to='/resetpassword'>Forgot Password</Link>
-        </div>
-        <div></div>
-        <div>
-          <button type='submit' disabled={disabled}>
-            Sign In
-          </button>
-        </div>
+        <FormBuilder
+          fields={fields}
+          init={init}
+          submitText="Sign In"
+          validationSchema={loginFormSchema}
+        />
       </form>
+      <Link className="forgotpw" to="/resetpassword">
+        Forgot Password?
+      </Link>
     </div>
   );
 }

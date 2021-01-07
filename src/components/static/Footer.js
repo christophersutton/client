@@ -8,10 +8,10 @@ const Footer = () => {
       <div>
         <p>Copyright © Water My Plants 2021</p>
         <Link className='route-link' to='/contact'>
-        Contact Us
+          Contact Us
         </Link>
         <Link className='route-link' to='/about'>
-        About Us
+          About Us
         </Link>
       </div>
     </footer>
