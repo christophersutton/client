@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import getPlants from "../../../store/actions/getPlants";
 import addPlant from "../../../store/actions/addPlant";
 import { connect } from "react-redux";
 import * as Yup from 'yup';
 import FormBuilder from '../../utils/FormBuilder'
-
 
 const plantSchema = Yup.object().shape({
   nickname: Yup.string().required("Please enter a name"),
@@ -28,24 +27,49 @@ let init = {};
 fields.forEach((field) => (init[field.id] = ""));
 
 const AddPlant = (props) => {
-  const submit = (e) => {
+
+  const [values, setValues] = useState(init);
+  const [disabled, setDisabled] = useState(true);
+
+  const onCancel = (e) => {
     e.preventDefault();
-    // post contact submit code
+    props.setEditing(false);
+    setValues(init);
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    // new plant goes here
+    const newPlant = values;
+    console.log(newPlant);
+    props.addPlant(newPlant);
+    setValues(init);
+    props.setEditing(false);
+  };
+
+ const getFormState = (state) => {
+    setValues(state.values);
+    setDisabled(state.disabled);
+ }
+  
   return (
     <div className="form-container">
       <h2>Add New Plant</h2>
-      <form onSubmit={submit}>
+      <form onSubmit={onSubmit}>
         <FormBuilder
           fields={fields}
           init={init}
-          submitText="Add Plant"
           validationSchema={plantSchema}
+          getFormState={getFormState}
         />
+      <button type="submit" disabled={disabled}>
+        Add Plant
+      </button>
+      <button onClick={onCancel}>Cancel</button>
       </form>
     </div>
   )
+
 };
 
 const mapStateToProps = (state) => ({

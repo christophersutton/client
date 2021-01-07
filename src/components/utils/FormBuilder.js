@@ -5,10 +5,10 @@ export default function FormBuilder(props) {
   // Pass in a few props to generate input fields w/ validation for your form
   // fields should be an object array with id, type, and label
   // init should an object with field id as keys and empty string values
-  // submitText is your submit button label
   // validationSchema should be a proper Yup schema
+  // getFormState is a callback that will pass state data back up to parent for consumption
 
-  const { fields, init, submitText, validationSchema } = props;
+  const { fields, init, validationSchema, getFormState } = props;
 
   const [values, setvalues] = useState(init);
   const [errors, setErrors] = useState(init);
@@ -39,7 +39,11 @@ export default function FormBuilder(props) {
     const { name, value } = e.target;
     JSON.stringify(errors) !== JSON.stringify(init) && validate(e);
     setvalues({ ...values, [name]: value });
+
+    let formState = {values:values,disabled:disabled}
+    getFormState(formState);
   };
+
 
   // helper method to create the proper input dom elements
   function createInput(field) {
@@ -74,10 +78,6 @@ export default function FormBuilder(props) {
           <p className="errors">&nbsp;{errors[field.id]}</p>
         </div>
       ))}
-
-      <button type="submit" disabled={disabled}>
-        {submitText}
-      </button>
     </div>
   );
 }

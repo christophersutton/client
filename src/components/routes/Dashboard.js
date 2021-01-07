@@ -3,27 +3,31 @@ import getPlants from "../../store/actions/getPlants";
 import { connect } from "react-redux";
 import "../sass/Dashboard.scss";
 // components
-import Plant from "./plants/Plant";
 import AddPlant from "./plants/AddPlant";
+import PlantPreview from "./plants/PlantPreview";
 
 const Dashboard = (props) => {
-  const [showing, setShowing] = useState(false);
   const { getPlants } = props;
   const { plants } = props.state.plantsReducer;
+  const [editing, setEditing] = useState(false);
 
   useEffect(() => {
     getPlants();
   }, [getPlants]);
 
-  const toggleShowing = (e) => setShowing(!showing);
-
   return (
     <section className='pg dash-pg'>
-      <button onClick={toggleShowing}>Add Plant</button>
-      {showing ? <AddPlant /> : null}
+      <button
+        onClick={() => {
+          setEditing(true);
+        }}
+      >
+        Add Plant
+      </button>
+      {editing ? <AddPlant setEditing={setEditing} /> : null}
       <ul className='plant-list'>
         {plants.map((plant, i) => (
-          <Plant plant={plant} key={i} />
+          <PlantPreview plant={plant} key={i} />
         ))}
       </ul>
     </section>
