@@ -23,10 +23,12 @@ export default function FormBuilder(props) {
 
   // Watch for validation errors and enable/disable submit button accordingly
   useEffect(() => {
+    let formState = {values:values,disabled:disabled}
+    getFormState(formState);
     validationSchema.isValid(values).then((valid) => {
       setDisabled(!valid);
     });
-  }, [values, validationSchema]);
+  }, [values, disabled, getFormState, validationSchema]);
 
   // validate is called onBlur and directly by onChange when warranted
   const validate = (e) => {
@@ -39,9 +41,6 @@ export default function FormBuilder(props) {
     const { name, value } = e.target;
     JSON.stringify(errors) !== JSON.stringify(init) && validate(e);
     setvalues({ ...values, [name]: value });
-
-    let formState = {values:values,disabled:disabled}
-    getFormState(formState);
   };
 
 
