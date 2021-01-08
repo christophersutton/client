@@ -65,7 +65,6 @@ const AddPlant = (props) => {
       <button type="submit" disabled={disabled}>
         Add Plant
       </button>
-      <button onClick={onCancel}>Cancel</button>
       </form>
     </div>
   )

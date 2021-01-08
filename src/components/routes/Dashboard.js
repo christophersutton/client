@@ -29,11 +29,19 @@ const Dashboard = (props) => {
     <section className="pg dash-pg">
       <section className="header">
         <div>
-          <h1>Welcome Back</h1>
+          <h1>Your Watering Schedule</h1>
         </div>
         <div>
-          {editing ? null : (
-            <button 
+          {editing ? (
+            <button
+              onClick={() => {
+                setEditing(false);
+              }}
+            >
+              Cancel
+            </button>
+          ) : (
+            <button
               onClick={() => {
                 setEditing(true);
               }}
@@ -59,7 +67,9 @@ const Dashboard = (props) => {
             </section>
           ))}
         </section>
-        {editing ? <AddPlant setEditing={setEditing} /> : null}
+        <section className="newPlant">
+          {editing ? <AddPlant setEditing={setEditing} /> : null}
+        </section>
       </div>
     </section>
   );

@@ -6,12 +6,26 @@
 
   .plant-list {
     display:flex;
+    flex-wrap:wrap;
   }
   
   .wrapper {
     display:flex;
+    justify-content: space-between;
+    @media(max-width: 767px){
+      flex-direction:column;
+    }
   }
-
+  .plants {
+    flex-grow:1;
+    flex-shrink:1;
+  }
+  .newPlant {
+    margin-left:5%;
+    @media(max-width: 767px){
+      order:-1;
+    }
+  }
   .header {
     display:flex;
     justify-content:space-between;
