@@ -1,10 +1,15 @@
 @import "config";
 @import "utils";
 
+form {
+  text-align: left;
+}
+
 .form-container {
   max-width: 400px;
   min-height: 50vh;
   margin: 0px auto;
+  
 
   @include font-size($p-font-sizes);
 

@@ -18,7 +18,7 @@ import Contact from "./routes/Contact";
 
 function App() {
   return (
-    <div>
+    <div className="pg">
       <header>
         <NavBar />
       </header>

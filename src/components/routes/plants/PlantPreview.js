@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { useModal } from "../../../utils/useModal";
 import PlantModal from "./PlantModal";
+import { prettyDate, wateringDate } from "../../utils/DateFormatters"
 
 const PlantPreview = (props) => {
   const { isShowing: isShowingPlant, toggle: togglePlant } = useModal();
@@ -13,14 +14,17 @@ const PlantPreview = (props) => {
     image,
     group,
     instructions,
-    last_water,
-    next_water,
+    last,
+    next,
   } = props.plant;
 
   return (
-    <li className='plant-list-item'>
+    <div className='plant-list-item'>
       <div className='plant-preview' onClick={togglePlant}>
-        <h3>{nickname}</h3>
+        <div className="preview-header">
+          <h3>{nickname}</h3>
+          <p>Last watered on {prettyDate(last)}</p>
+        </div>
         <img
           src={
             image
@@ -36,7 +40,7 @@ const PlantPreview = (props) => {
         isShowing={isShowingPlant}
         hide={togglePlant}
       />
-    </li>
+    </div>
   );
 };
 
